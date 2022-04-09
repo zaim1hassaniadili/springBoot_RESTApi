@@ -1,0 +1,14 @@
+package com.example.revamp.Repo;
+
+
+
+
+import com.example.revamp.Model.User;
+import org.checkerframework.checker.units.qual.C;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
+
+public interface UserRepo  extends JpaRepository<User, Long>  {
+    User findByUsername(String username);
+}
+
